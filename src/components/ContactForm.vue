@@ -5,7 +5,7 @@
   const name = ref('')
   const number = ref('')
 
-  // 
+  // emit
   const emit = defineEmits(['add-contact'])
 
   // agregar nuevo ontacto
@@ -23,7 +23,6 @@
 
 <template>
   <div>
-
     <!--formulari per afegir els contactes-->
     <input v-model="name" placeholder="Escriu el nom..."/>
     <input v-model="number" placeholder="Escriu el número de teléfon..."/>
