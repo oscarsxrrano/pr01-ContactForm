@@ -1,5 +1,5 @@
 <template>
-    <div>
-        <p>yeyeyeyeye</p>
-    </div>
+  <div>
+    <p>yeyeyeyeye</p>
+  </div>
 </template>

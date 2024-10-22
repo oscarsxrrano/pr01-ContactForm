@@ -1,7 +1,5 @@
 <script setup>
-import CompPare from './components/CompPare.vue';
-
-
+import CompPare from './components/CompPare.vue'
 </script>
 
 <template>
@@ -10,6 +8,4 @@ import CompPare from './components/CompPare.vue';
   </div>
 </template>
 
-<style scoped>
-
-</style>
+<style scoped></style>
