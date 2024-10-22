@@ -23,7 +23,6 @@
 
 <template>
   <div>
-    <h1>Afegir Contactes</h1>
 
     <!--formulari per afegir els contactes-->
     <input v-model="name" placeholder="Escriu el nom..."/>
@@ -34,7 +33,5 @@
 </template>
 
 <style scoped>
-  div {
-    background-color: blanchedalmond;
-  }
+  
 </style>

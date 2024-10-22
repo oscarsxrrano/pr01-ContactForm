@@ -2,7 +2,6 @@
   // imports vue
   import { ref } from 'vue'
   import ContactForm from './components/ContactForm.vue';
-
   
   // array contactes
   const contacts = ref([])
@@ -32,4 +31,9 @@
   #numero {
     color: rgb(75, 161, 133);
   }
+
+  div {
+    background-color: blanchedalmond;
+  }
+
 </style>
