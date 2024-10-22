@@ -32,5 +32,8 @@
 </template>
 
 <style scoped>
-  
+  button {
+    background-color: green;
+    color: white;
+  }
 </style>
