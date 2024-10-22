@@ -1,21 +1,15 @@
 <script setup>
+  // imports vue
   import { ref } from 'vue'
+  import ContactForm from './components/ContactForm.vue';
 
-  const contactName = ref('')
-  const contactNumber = ref ('')
+  
+  // array contactes
+  const contacts = ref([])
 
-  // Afegir contacte
-  const addContact = () => {
-    if (contactName.value && contactNumber.value) {
-      console.log('Nou contacte:', {
-        name: contactName.value,
-        number: contactNumber.value
-      })
-
-      // Limpiar el formulario
-      contactName.value = ''
-      contactNumber.value = ''
-    }
+  // funcion para añadir el contacto al array
+  const addContact = (newContact) => {
+    contacts.value.push(newContact)
   }
 </script>
 
@@ -23,16 +17,19 @@
   <div>
     <h1>Llibreta de Contactes</h1>
 
-    <!--formulari per afegir els contactes-->
-    <input v-model="contactName" placeholder="Escriu el nom..."/>
-    <input v-model="contactNumber" placeholder="Escriu el número de teléfon..."/>
-    <button @click="addContact">Afegir contacte</button>
+    <ContactForm @add-contact="addContact"></ContactForm>
 
+    <!--llista de contactes-->
+    <ul>
+      <li v-for="(contact, index) in contacts" :key="index">
+        {{ contact.name }} - <span id="numero">{{ contact.number }}</span>
+      </li>
+    </ul>
   </div>
 </template>
 
 <style scoped>
-body {
-  background-color: rgb(168, 233, 241);
-}
+  #numero {
+    color: rgb(75, 161, 133);
+  }
 </style>

@@ -1,0 +1,40 @@
+<script setup>
+  import { ref } from 'vue'
+
+  // variables reactives
+  const name = ref('')
+  const number = ref('')
+
+  // 
+  const emit = defineEmits(['add-contact'])
+
+  // agregar nuevo ontacto
+  const addContact = () => {
+    if (name.value && number.value) {
+      // hacer un emit al component pare
+      emit('add-contact', { name: name.value, number: number.value})
+
+      name.value = ''
+      number.value = ''
+    }
+  }
+
+</script>
+
+<template>
+  <div>
+    <h1>Afegir Contactes</h1>
+
+    <!--formulari per afegir els contactes-->
+    <input v-model="name" placeholder="Escriu el nom..."/>
+    <input v-model="number" placeholder="Escriu el número de teléfon..."/>
+    <button @click="addContact">Afegir contacte</button>
+
+  </div>
+</template>
+
+<style scoped>
+  div {
+    background-color: blanchedalmond;
+  }
+</style>
